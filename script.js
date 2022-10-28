@@ -1,6 +1,5 @@
 "use strict";
-setInterval(showtime, 1000);
-function showtime() {
+const showtime = function () {
   let time = new Date();
   let hour = time.getHours();
   let min = time.getMinutes();
@@ -19,5 +18,6 @@ function showtime() {
   sec = sec < 10 ? "0" + sec : sec;
   let currentTime = hour + ":" + min + ":" + sec + am_pm;
   document.querySelector(".clock").innerHTML = currentTime;
-}
+};
+setInterval(showtime, 1000);
 showtime();
